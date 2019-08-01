@@ -9,7 +9,6 @@ void lesson3()
    {
         int numFloorStart;
         int numFloorGo;
-        int numFloorGo2;
         int numChange;
 
         std::cout << " Where are you?\n";
@@ -23,7 +22,6 @@ void lesson3()
 
         std::cout << " Choose a floor...\n";
         std::cin >> numFloorGo;
-        std::cin >> numFloorGo2;
         if(numFloorGo>12 || numFloorGo<0)
    do {
         std::cout << " This number does not exist!\n Choose a floor...\n";

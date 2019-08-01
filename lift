@@ -1,0 +1,69 @@
+#include "lessons.h"
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+#include <windows.h>
+
+void lesson3()
+
+   {
+        int numFloorStart;
+        int numFloorGo;
+        int numFloorGo2;
+        int numChange;
+
+        std::cout << " Where are you?\n";
+        std::cin >> numFloorStart;
+        if(numFloorStart>12 || numFloorStart<0)
+    do {
+        std::cout << " It's impossible!\n Where are you?\n";
+        std::cin >> numFloorStart;
+        }
+        while(numFloorStart>12 || numFloorStart<0);
+
+        std::cout << " Choose a floor...\n";
+        std::cin >> numFloorGo;
+        std::cin >> numFloorGo2;
+        if(numFloorGo>12 || numFloorGo<0)
+   do {
+        std::cout << " This number does not exist!\n Choose a floor...\n";
+        std::cin >> numFloorGo;
+       }
+        while(numFloorGo>12 || numFloorGo<0);
+   if(numFloorStart==numFloorGo)
+        std::cout << " We cannot do this. Destination = Departure! ";
+   else
+     std::cout << " So, we start our travel! \n";
+
+       numChange=numFloorGo-numFloorStart;
+   if(numChange>0)
+   {std::cout << "Change Floor on " << numChange;
+       Sleep(1000);
+       int numChange;
+   do {
+        std::cout << "\nFloor " << numFloorStart++ << ".";
+        Sleep(800);
+       }
+       while(numFloorStart<=numFloorGo);
+   }
+ else {std::cout << "Change Floor on " << numChange;
+       Sleep(1000);
+       int numChange;
+   do {
+        std::cout << "\nFloor " << numFloorStart-- << ".";
+        Sleep(800);
+       }
+       while(numFloorGo<=numFloorStart);
+   }
+       Sleep(1000);
+       std::cout << "\n";
+
+ std::cout << "Have a good day, my friend! \n";
+
+system("pause");
+
+
+    }
+
+
+}

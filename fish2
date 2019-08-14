@@ -31,10 +31,33 @@ public: void saySomething()
 
 class OsetrFish : public BonesFish
 {
-   public: void saySomething()
-    {std::cout << " This is a fish of the sturgeon family.\n"  // Это рыба семейства осетровых.
+    int length;
+    int weigth;
+
+public: void saySomething()
+    {std::cout << " Put a length fish in cm... ";
+        std::cin >> length;
+
+     std::cout << "\n This is a fish of the sturgeon family.\n"     // Это рыба семейства осетровых.
                   " Relatives: beluga, sterlet, sturgeon.\n"      // Родственники: белуга, стерлядь, осетр.
-                  " It feeds mainly on mollusks and other fish.";}    // Жрет моллюсков и других рыб.
+                  " It feeds mainly on mollusks and other fish."; // Жрет моллюсков и других рыб.
+     if(length<=70)
+     {std::cout << "\n \n Please let this fish go! She is still too small!";
+         std::cout << "\n Length Osetr = " << length << " cm \n " << " Weight < 2 kg\n ";}
+
+     if(length>70 && length<100)
+     {std::cout << "\n \n You can eat this tasty fish!";
+         std::cout << "\n Length Osetr = " << length << " cm \n " << " Weight = 2-4 kg\n ";}
+
+     if(length>=100 && length<=120)
+     {std::cout << "\n \n You can eat this big tasty fish!";
+         std::cout << "\n Length Osetr = " << length << " cm \n " << " Weight = 4-8 kg (+ 200 gr per 1 cm of length.)\n ";}
+
+     if(length>120)
+     {std::cout << "\n \n This is big fucking Osetr! You need a libra and Guinness Book of Records!";
+         std::cout << "\n Length Osetr = " << length << " cm \n " << " God know only weight this fish!\n ";}
+
+    }
 };
 
 class CarpFish : public BonesFish
@@ -79,19 +102,19 @@ std::string var8 = "middle";
             std::cout << " 4. Describe the doral fin: tail, middle, long.\n";
             std::cin >> answer4;
 
-     if(answer1==var1 and answer2==var2 and answer3==var3 and answer4==var6)
+     if(answer1==var1 && answer2==var2 && answer3==var3 && answer4==var6)
   { BonesFish rybka;
     rybka.saySomething();
     OsetrFish osetr;
 osetr.saySomething();}
 
-else if(answer1==var1 and answer2==var1 and answer3==var4 and answer4==var7)
+else if(answer1==var1 && answer2==var1 && answer3==var4 && answer4==var7)
   { BonesFish rybka;
   rybka.saySomething();
   CarpFish carp;
 carp.saySomething();}
 
-else if(answer1==var1 and answer2==var2 and answer3==var5 and answer4==var8)
+else if(answer1==var1 && answer2==var2 && answer3==var5 && answer4==var8)
   { BonesFish rybka;
 rybka.saySomething();
 SeldFish seld;

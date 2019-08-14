@@ -1,0 +1,115 @@
+#include "lessons.h"
+#include <iostream>
+#include <algorithm>
+#include <stdlib.h>
+#include <windows.h>
+#include <string>
+
+class Fish
+{
+public:
+    void saySomething()
+    {
+        std::cout << "\n This is no fish\n";
+    }
+};
+
+class CartilaFish : public Fish
+{public: void saySomething()
+    {std::cout << "\n This is cartilaginous fish. This is either a shark, or a chimera, or a stingray.\n"
+                  "In any case, I would not eat it! :)";}
+};
+
+class BonesFish : public Fish
+{
+public: void saySomething()
+    {
+        std::cout << "\n This is bone fish. She definitely has a swim bladder.\n"
+                     " Only external fertilization and small caviar.\n \n";
+    }
+};
+
+class OsetrFish : public BonesFish
+{
+   public: void saySomething()
+    {std::cout << " This is a fish of the sturgeon family.\n"  // Это рыба семейства осетровых.
+                  " Relatives: beluga, sterlet, sturgeon.\n"      // Родственники: белуга, стерлядь, осетр.
+                  " It feeds mainly on mollusks and other fish.";}    // Жрет моллюсков и других рыб.
+};
+
+class CarpFish : public BonesFish
+{ public: void saySomething()
+     {std::cout << " This is a fish of the carp family.\n"        // Это рыба семейства карповых.
+                   " Relatives: bream, grass carp, roach.\n"      // Родственники: лещ, амур, плотва.
+                   " It feeds on larvae, flies, mosquitoes on the surface of the water.\n"
+                   " It also rummages in silt.";}
+};
+
+class SeldFish : public BonesFish
+{
+public:void saySomething()
+    {std::cout << " This is a fish of the herring family.\n"      //Это рыба семейства сельдевых.
+                  " Relatives: sardinella, sardine, sprat.\n"     //Родственники: сардинелла, сардина, шпрот.
+                  " It feeds mainly plankton.";}
+};
+
+void lesson7()
+{
+std::string answer1;
+std::string answer2;
+std::string answer3;
+std::string answer4;
+std::string answer5;
+
+std::string var1 = "yes";
+std::string var2 = "no";
+std::string var3 = "clam";
+std::string var4 = "larvae";
+std::string var5 = "plankton";
+std::string var6 = "tail";
+std::string var7 = "long";
+std::string var8 = "middle";
+
+            std::cout << " 1. Does fish have spine? Yes/No\n";
+            std::cin >> answer1;
+            std::cout << " 2. Does fish have teeth? Yes/No\n";
+            std::cin >> answer2;
+            std::cout << " 3. What does fish eat: clam, larvae or plankton?\n";
+            std::cin >> answer3;
+            std::cout << " 4. Describe the doral fin: tail, middle, long.\n";
+            std::cin >> answer4;
+
+     if(answer1==var1 and answer2==var2 and answer3==var3 and answer4==var6)
+  { BonesFish rybka;
+    rybka.saySomething();
+    OsetrFish osetr;
+osetr.saySomething();}
+
+else if(answer1==var1 and answer2==var1 and answer3==var4 and answer4==var7)
+  { BonesFish rybka;
+  rybka.saySomething();
+  CarpFish carp;
+carp.saySomething();}
+
+else if(answer1==var1 and answer2==var2 and answer3==var5 and answer4==var8)
+  { BonesFish rybka;
+rybka.saySomething();
+SeldFish seld;
+seld.saySomething();}
+
+     else if(answer1==var2)
+     std::cout << "\n This is either a shark, or a chimera, or a stingray.\n"
+                  " In any case, I would not eat it! Drop and run!";
+
+else std::cout << "\n \n I dont know who is it! Drop it immediately!";
+
+//    BonesFish rybka;
+//    OsetrFish osetr;
+//    CarpFish carp;
+//    SeldFish seld;
+//    osetr.saySomething();
+//    carp.saySomething();
+//    seld.saySomething();
+//    rybka.saySomething();
+
+}
